@@ -1,0 +1,9 @@
+<% @attractions.each do |attraction| %>
+	<ul>
+		<li>Name: <%= link_to attraction.name, "attractions/#{attraction.id}" %></li>
+		<li>Tickets: <%= attraction.tickets %></li>
+		<li>Height Requirement: <%= attraction.min_height %></li>	
+	</ul>
+<% end %>
+
+<p><% link_to "New Attraction", '/attractions/new' %></p>
